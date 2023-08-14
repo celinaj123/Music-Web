@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMusic</title>
+    <link rel="stylesheet" href="musicstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+ </head>
+ <body>
+  
+    <div class="main">
+
+        <div class="top">
+            <button onclick="sidebar()"><i class='bx bx-chevron-right'></i></button>
+
+            <div class="option">
+                <button><i class='bx bxs-volume-low' onclick="sound_less()"></i></button>
+                <button><i class='bx bxs-volume-mute' onclick="mute_sound()" id="volume_icon"></i></button>
+                <button><i class='bx bxs-volume-full' onclick="sound_on()"></i></button>
+            </div>
+            <button onclick="open_p()"><i class='bx bx-menu-alt-left'></i></button>
+        </div>
+
+        <div class="play">
+            <div class="img">
+                <img id="track_image" src="https://i.pinimg.com/474x/bc/e9/3f/bce93fa76dcb48abb30c32e16171f061.jpg" alt="img" srcset="">
+            </div>
+        </div>
+
+        <div class="control_part">
+            <div class="songtitle">
+                <p id="title">song title</p>
+                <p id="artist">artist name</p>
+            </div>
+
+            <div class="controlbutton">
+                <div class="rangeslider">
+                    <input type="range" min="0" max="100" id="slider" value="0" onchange="change_duration()">
+                    <p onchange="show_duration()">00.00</p>
+                </div>
+
+                <div class="main_btns">
+                    <button id="previous" onclick="previous_song()"><i class='bx bx-skip-previous'></i></button>
+                    
+                    <button id="play_btn" onclick="justplay()"><i class='bx bx-play'></i></button>
+                    
+                    <button onclick= "next_song()" id="next"><i class='bx bx-skip-next'></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="p_song" >
+                <p id="p_title">Seven</p>
+                <p id="p_artist">Jungkook & Latto</p>
+                <button onclick="justplay1()"><i class='bx bx-play'></i></button>
+            </div>
+
+            <div class="p_song">
+                <p id="p_title">2U</p>
+                <p id="p_artist">Jungkook [cover]</p>
+                <button onclick="justplay2()"><i class='bx bx-play'></i></button>
+            </div>
+
+            <div class="p_song">
+                <p id="p_title">Karna Ada Ko</p>
+                <p id="p_artist">New Gvme</p>
+                <button onclick="justplay3()"><i class='bx bx-play'></i></button>
+            </div>
+
+            <div class="p_song">
+                <p id="p_title">剩下的盛夏</p>
+                <p id="p_artist">TF Boys</p>
+                <button onclick="justplay4()"><i class='bx bx-play'></i></button>
+            </div>
+
+            <div class="p_song">
+                <p id="p_title">Attention</p>
+                <p id="p_artist">New Jeans</p>
+                <button onclick="justplay5()"><i class='bx bx-play'></i></button>
+            </div>
+        </div>
+
+    </div>
+    <script src="musicscript.js"></script>
+ </body>
+ </html>
